@@ -15,5 +15,10 @@
   <%= @cat.age %>
 </p>
 
+<p>
+  <strong>Owner:</strong>
+  <%= @cat.owner_name %>
+</p>
+
 <%= link_to 'Edit', edit_cat_path(@cat) %> |
 <%= link_to 'Back', cats_path %>
