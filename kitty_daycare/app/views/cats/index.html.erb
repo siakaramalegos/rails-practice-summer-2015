@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Breed</th>
       <th>Age</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @cats.each do |cat| %>
       <tr>
+        <td><%= cat.id %></td>
         <td><%= cat.name %></td>
         <td><%= cat.breed %></td>
         <td><%= cat.age %></td>
