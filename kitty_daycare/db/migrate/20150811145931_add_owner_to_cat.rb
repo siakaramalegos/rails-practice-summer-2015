@@ -1,5 +1,5 @@
 class AddOwnerToCat < ActiveRecord::Migration
   def change
-    add_column :cats, :owner_name, :string
+    add_column :cats, :owner, :string
   end
 end
