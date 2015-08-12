@@ -17,7 +17,7 @@
 
 <p>
   <strong>Owner:</strong>
-  <%= @cat.owner_name %>
+  <%= @cat.try(:owner).try(:name) %>
 </p>
 
 <%= link_to 'Edit', edit_cat_path(@cat) %> |
