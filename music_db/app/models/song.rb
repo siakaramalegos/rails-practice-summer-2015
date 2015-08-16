@@ -4,8 +4,7 @@ class Song < ActiveRecord::Base
   validates :name, :artist_id, presence: true
   validates_uniqueness_of :name, :scope => :artist_id
 
-  scope :recent, -> (minutes_past = 60)
-  {where("created_at > ?", minutes_past.minutes.ago)}
+  scope :recent, -> (minutes_past = 60) {where("created_at > ?", minutes_past.minutes.ago)}
 end
 
 # == Schema Information
