@@ -16,7 +16,7 @@ end
 #  artist_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-# pretend we also have description, rating
+#
 # Indexes
 #
 #  index_songs_on_artist_id  (artist_id)
