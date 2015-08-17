@@ -5,13 +5,10 @@ namespace :db do
     require 'faker'
 
     # Clear out the old junk
-    [Genre, Artist, Song].each(&:destroy_all)
+    [Artist, Song].each(&:destroy_all)
 
     # Add fake data to those tables
-    Genre.populate 5 do |genre|
-      # Set the genre name
-      genre.name = Faker::Hacker.noun
-
+    Genre.all.each do |genre|
       # Create artists inside that genre
       Artist.populate 5..10 do |artist|
         # Set the artist name and genre id
